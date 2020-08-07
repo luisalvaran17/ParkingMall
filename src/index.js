@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Intro1 from './components/Intro1';
+import 'bootstrap/dist/css/bootstrap.css';
+import Welcome from './pages/Welcome';
+import IntroQR from './pages/IntroQR';
+
 
 ReactDOM.render(
-    <Intro1 />,
+    <IntroQR />,
     document.getElementById('root')
 );
 
