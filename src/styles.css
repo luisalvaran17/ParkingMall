@@ -1,0 +1,27 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  padding-top: 60px;
+  background-color: white;
+}
+
+.container .logo {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.container .logoPM {
+  width: 80%;
+  height: 95%;
+}
+
+.container .descripcion-intro {
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.container button {
+  width: 40%;
+  font-weight: bold;
+}
+/*# sourceMappingURL=styles.css.map */
