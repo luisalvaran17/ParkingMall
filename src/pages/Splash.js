@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import logo from './images/ParkingMall.jpg';
-import './styles/inicio.css';
+import './styles/styles.css';
 
-class Inicio extends Component {
+class Splash extends Component {
     render() {
         return (
-            <div className="container">
+            <div className="container" id="splashContenedor">
                 <div className="row logo">
                     <div className="col-sm" >
                         <img className="logoPM" src={logo}></img>
@@ -17,4 +17,4 @@ class Inicio extends Component {
     }
 }
 
-export default Inicio;
+export default Splash;

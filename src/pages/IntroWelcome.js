@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './images/logoPM.jpg';
-import './styles/welcome.css';
+import './styles/styles.css';
 
-class Welcome extends Component {
+class IntroWelcome extends Component {
     render() {
         return (
             <div className="container">
@@ -12,7 +12,7 @@ class Welcome extends Component {
                     </div>
                 </div>
 
-                <div className="row logo">
+                <div className="row logo-qr">
                     <div className="col-sm" >
                         <img className="logoPM" src={logo}></img>
                     </div>
@@ -45,4 +45,4 @@ class Welcome extends Component {
     }
 }
 
-export default Welcome;
+export default IntroWelcome;

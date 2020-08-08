@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+// Splash
+.container {
+    
+    h1{
+        font-family: 'Lobster', cursive;
+    }
+}
+#splashContenedor{
+    padding-top: 180px;
+}
+
+//Intros
+//Intro Bienvenida
+.container{
+    text-align: center;
+    padding:20px;
+    padding-top:60px;
+    background-color: white;
+    .logo{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .logoPM{
+        width: 80%;
+        height: 95%;
+    }
+    .descripcion-intro{
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+    button{
+        width: 40%;
+        font-weight: bold;
+    }
+}
+
+// IntroQR
+.container {
+    .logo-qr {
+        width: 10%;
+        
+    }
+    .logoPM{
+        width: 80%;
+        height: 95%;
+    }
+      
+    .tituloQR {
+    color: #111;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0 0 24px;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+    //border-radius: 8px 8px 8px 8px;
+    }
+  }
+#containerQR{
+    //background-color: #f7fbe1;  
+}
+#imgQR{
+    width: 80%;
+    height: 95%;
+}
