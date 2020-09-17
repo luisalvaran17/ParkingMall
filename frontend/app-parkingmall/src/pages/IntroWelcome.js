@@ -14,7 +14,7 @@ class IntroWelcome extends Component {
 
                 <div className="row logo-qr">
                     <div className="col-sm" >
-                        <img  src={logo}></img>
+                        <img src={logo} style={{}}></img>
                     </div>
                 </div>
 
