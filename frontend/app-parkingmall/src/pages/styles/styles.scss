@@ -1,71 +1,117 @@
 
+//import fonts
+
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap');
+@font-face {
+    font-family: asap_medium;
+    src: url(../fonts/Asap-Medium.ttf);
+  }
+@font-face {
+    font-family: open_sans;
+    src: url(../fonts/OpenSans-Light.ttf);
+  }
 
-// Splash
-.container {
-    
-    h1{
-        font-family: 'Lobster', cursive;
-    }
-}
-#splashContenedor{
-    padding-top: 180px;
-}
-
-//Intros
-//Intro Bienvenida
 .container{
-    text-align: center;
-    padding:20px;
-    padding-top:60px;
-    background-color: white;
-    .logo{
-        padding-top: 20px;
-        padding-bottom: 10px;
-    }
-    .logoPM{
-        width: 400px;
-        height: 95%;
-    }
-    .descripcion-intro{
-        padding-bottom: 20px;
-        font-size: 14px;
-    }
-    button{
-        width: 40%;
-        font-weight: bold;
-    }
+    padding-top:20px;
 }
 
-// IntroQR
-.container {
-    .logo-qr {
-        width: 10%;
-        
-    }
-    .logoPM{
-        width: 80%;
-        height: 95%;
-    }
-      
-    .tituloQR {
-    color: #111;
-    font-family: "Open Sans Condensed", sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 48px;
-    margin: 0 0 24px;
-    padding: 0 30px;
-    text-align: center;
-    text-transform: uppercase;
-    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
-    //border-radius: 8px 8px 8px 8px;
+// Header and footer (navs)
+.tittleBrand{
+    font-family: 'Asap', sans-serif;
+    color: #eea236;
+    font-weight:bold;
+    font-size: 35px;
+}
+.textNav{
+    font-family: asap_medium, sans-serif;
+}
+
+.userLogo{
+    width:50px;
+    border-radius:50px;
+}
+
+.textTitles {
+        font-family: open_sans, sans-serif;
+        color:'gray';
+        font-size:12px;
+        text-align: left;
+        h6{
+            font-family: open_sans;
+            font-weight: bold;
+            font-size:12px;
+        }
+        p{
+            font-family: open_sans;
+            font-size:12px;  
+        }
+        span{
+            font-size: 25px;
+        }
+        a{
+            font-size: 25px;
+            color: black;
+        }
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
     }
   }
-#containerQR{
-    //background-color: #f7fbe1;  
+
+.contenedor {
+    width: auto;
+    max-width: 680px;
+  }
+  
+.footer {
+    background-color: #f5f5f5;
+    flex-shrink: none;
+  }
+  
+.FooterColor{
+    background-color:#edf0f4;
 }
-#imgQR{
-    width: 80%;
-    height: 95%;
+
+// Styles page Scan QR
+.marginContainerScanQR{
+    margin-left:'10%';
+    text-align: left;
+    .h6TitleScan{
+        font-family: asap_medium, sans-serif;
+        font-size:45px;
+        font-weight: 600;
+    }
+    .textDescripcionQR{
+        font-family: open_sans;
+        font-size:30px;
+        text-align: justify;
+    }
+    .contenedorEspacioAsignado{
+        font-family: asap_medium;
+        text-align:center;
+        align-items:center;
+        
+        h1{
+            font-family: asap_medium;
+            color: rgb(174, 181, 204);
+            font-weight: 900;
+            font-size: 60px;
+        }
+        h4{
+            font-family: asap_medium;
+            font-size: 20px;
+        }
+    }
 }

@@ -1,62 +1,126 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-.container h1 {
-  font-family: 'Lobster', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap");
+@font-face {
+  font-family: asap_medium;
+  src: url(../fonts/Asap-Medium.ttf);
 }
 
-#splashContenedor {
-  padding-top: 180px;
+@font-face {
+  font-family: open_sans;
+  src: url(../fonts/OpenSans-Light.ttf);
 }
 
 .container {
-  text-align: center;
-  padding: 20px;
-  padding-top: 60px;
-  background-color: white;
-}
-
-.container .logo {
   padding-top: 20px;
-  padding-bottom: 10px;
 }
 
-.container .logoPM {
-  width: 80%;
-  height: 95%;
-}
-
-.container .descripcion-intro {
-  padding-bottom: 20px;
-  font-size: 14px;
-}
-
-.container button {
-  width: 40%;
+.tittleBrand {
+  font-family: 'Asap', sans-serif;
+  color: #eea236;
   font-weight: bold;
+  font-size: 35px;
 }
 
-.container .logo-qr {
-  width: 10%;
+.textNav {
+  font-family: asap_medium, sans-serif;
 }
 
-.container .logoPM {
-  width: 80%;
-  height: 95%;
+.userLogo {
+  width: 50px;
+  border-radius: 50px;
 }
 
-.container .tituloQR {
-  color: #111;
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 48px;
-  margin: 0 0 24px;
-  padding: 0 30px;
+.textTitles {
+  font-family: open_sans, sans-serif;
+  color: 'gray';
+  font-size: 12px;
+  text-align: left;
+}
+
+.textTitles h6 {
+  font-family: open_sans;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.textTitles p {
+  font-family: open_sans;
+  font-size: 12px;
+}
+
+.textTitles span {
+  font-size: 25px;
+}
+
+.textTitles a {
+  font-size: 25px;
+  color: black;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.contenedor {
+  width: auto;
+  max-width: 680px;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  -ms-flex-negative: none;
+      flex-shrink: none;
+}
+
+.FooterColor {
+  background-color: #edf0f4;
+}
+
+.marginContainerScanQR {
+  margin-left: '10%';
+  text-align: left;
+}
+
+.marginContainerScanQR .h6TitleScan {
+  font-family: asap_medium, sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.marginContainerScanQR .textDescripcionQR {
+  font-family: open_sans;
+  font-size: 30px;
+  text-align: justify;
+}
+
+.marginContainerScanQR .contenedorEspacioAsignado {
+  font-family: asap_medium;
   text-align: center;
-  text-transform: uppercase;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#imgQR {
-  width: 80%;
-  height: 95%;
+.marginContainerScanQR .contenedorEspacioAsignado h1 {
+  font-family: asap_medium;
+  color: #aeb5cc;
+  font-weight: 900;
+  font-size: 60px;
+}
+
+.marginContainerScanQR .contenedorEspacioAsignado h4 {
+  font-family: asap_medium;
+  font-size: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
