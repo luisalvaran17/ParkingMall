@@ -10,15 +10,15 @@ class HeaderAndFooter extends Component {
     render() {
         return (
             <div>
-                <div class="d-flex flex-column flex-md-row align-items-left p-1 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-                    <a class="navbar-brand" href="#">
+                <div className="d-flex flex-column flex-md-row align-items-center p-1 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+                    <a className="navbar-brand" href="#">
                         <img src={logo} style={{width:"60px"}} alt="logo app"/>
                     </a>
-                    <h5 class="tittleBrand my-0 mr-md-auto">ParkingMall</h5>
-                    <nav class="my-2 my-md-0 mr-md-3 textNav">
-                        <a class="p-2 text-dark" href="#">Scan QR</a>
-                        <a class="p-2 text-dark" href="#"></a>
-                        <a class="p-2 text-dark">Username</a>
+                    <h5 className="tittleBrand my-0 mr-md-auto">ParkingMall</h5>
+                    <nav className="my-2 my-md-0 mr-md-3 textNav">
+                        <a className="p-2 text-dark" href="#">Scan QR</a>
+                        <a className="p-2 text-dark" href="#"></a>
+                        <a className="p-2 text-dark">Username</a>
                     </nav>
                     <Dropdown>
                     <Dropdown.Toggle variant="" id="">
@@ -59,8 +59,8 @@ class HeaderAndFooter extends Component {
                     </div>
                 </div>
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
                 </nav>
             </div>

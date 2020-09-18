@@ -10,7 +10,7 @@ import IntroQR from './pages/IntroQR';
 import MainPage from './pages/MainPage';
 
 ReactDOM.render(
-  <ScanQR />,
+  <HeaderAndFooter />,
   document.getElementById('root')
 );
 

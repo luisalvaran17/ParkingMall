@@ -88,6 +88,9 @@
 .marginContainerScanQR{
     margin-left:'10%';
     text-align: left;
+    .logoParkingMall{
+        width: 110px;
+    }
     .h6TitleScan{
         font-family: asap_medium, sans-serif;
         font-size:45px;
@@ -113,5 +116,8 @@
             font-family: asap_medium;
             font-size: 20px;
         }
+    }
+    .imageScanMobileQR{
+        width: 300px;
     }
 }

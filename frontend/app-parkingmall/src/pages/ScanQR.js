@@ -8,11 +8,11 @@ class ScanQR extends Component {
     render() {
         return (
             <div className='container'>
-                <div class="d-flex flex-column flex-md-row align-items-left p-6 px-md-0 mb-1 bg-white">
+                <div className="d-flex flex-column flex-md-row align-items-center p-6 px-md-0 mb-1 bg-white">
                     <div className='marginContainerScanQR' >
                         <div className='col-sm' style={{padding:'0'}}>
-                            <img src={logo} style={{width:"110px"}} alt=""/>
-                            <h5 class="tittleBrand my-0 mr-md-auto">ParkingMall</h5>
+                            <img className='logoParkingMall' src={logo} alt=""/>
+                            <h5 className="tittleBrand my-0 mr-md-auto">ParkingMall</h5>
                         </div>
                     </div>
                 </div>
@@ -52,17 +52,15 @@ class ScanQR extends Component {
                             </div>
                         </div>
                         
-                        
                         <div className='col-sm-4 col-xl'>
                             <div className='row'>
-                                <img src={imageScanMobileQR} style={{width:'300px'}}/>
+                                <img className='imageScanMobileQR' src={imageScanMobileQR}/>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-                <nav class="navbar fixed-bottom navbar-expand-sm p-3 " style={{backgroundColor:'#edf0f4'}}>
+                <nav className="navbar FooterColor fixed-bottom navbar-expand-sm p-3 ">
                 <div className='container-sm textTitles' style={{}}>
                     <div className='sm-3'>
                         <h5 class="tittleBrand my-0 mr-md-auto">ParkingMall</h5>
@@ -87,8 +85,8 @@ class ScanQR extends Component {
                     </div>
                 </div>
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
                 </nav>
             </div>

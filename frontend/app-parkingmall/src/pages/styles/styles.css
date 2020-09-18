@@ -92,6 +92,10 @@
   text-align: left;
 }
 
+.marginContainerScanQR .logoParkingMall {
+  width: 110px;
+}
+
 .marginContainerScanQR .h6TitleScan {
   font-family: asap_medium, sans-serif;
   font-size: 45px;
@@ -122,5 +126,9 @@
 .marginContainerScanQR .contenedorEspacioAsignado h4 {
   font-family: asap_medium;
   font-size: 20px;
+}
+
+.marginContainerScanQR .imageScanMobileQR {
+  width: 300px;
 }
 /*# sourceMappingURL=styles.css.map */
