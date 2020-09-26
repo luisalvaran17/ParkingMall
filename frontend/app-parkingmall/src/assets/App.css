@@ -1,1 +1,79 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap");
+@font-face {
+  font-family: asap_medium;
+  src: url(../assets/fonts/Asap-Medium.ttf);
+}
+
+@font-face {
+  font-family: open_sans;
+  src: url(../assets/fonts/OpenSans-Light.ttf);
+}
+
+.container {
+  padding-bottom: 2%;
+  background-color: white;
+  font-family: open_sans, sans-serif;
+  font-size: 13px;
+}
+
+.container .rowPiso {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .rowPiso h5, .container .rowPiso .titlePiso {
+  margin-top: 10px;
+  font-family: asap_medium ,open_sans, sans-serif;
+  font-size: 18px;
+  color: orange;
+  padding: 0;
+}
+
+.container .borderRowTop {
+  border: 0.1px;
+  border-top-color: gray;
+  border-top-style: solid;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .borderRowBottom {
+  border: 0.1px;
+  border-bottom-color: gray;
+  border-bottom-style: solid;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .gridColumns {
+  border: 0.1px;
+  border-right-color: gray;
+  border-right-style: solid;
+}
+
+.container .carSize {
+  width: 50%;
+}
+
+.container .rowArrows {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: open_sans, sans-serif;
+  font-size: 13px;
+}
+
+.container .rowArrows img {
+  width: 10%;
+}
+/*# sourceMappingURL=App.css.map */

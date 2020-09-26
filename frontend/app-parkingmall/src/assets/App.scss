@@ -1,1 +1,70 @@
 // global styles
+
+//import fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap');
+@font-face {
+    font-family: asap_medium;
+    src: url(../assets/fonts/Asap-Medium.ttf);
+  }
+@font-face {
+    font-family: open_sans;
+    src: url(../assets/fonts/OpenSans-Light.ttf);
+  }
+
+// styles parking grid
+.container{
+    padding-bottom: 2%;
+    background-color: white;
+    font-family: open_sans, sans-serif;
+    font-size: 13px;
+    .rowPiso{
+        text-align: center;
+        align-items: center;
+        h5, .titlePiso{
+            margin-top: 10px;
+            font-family: asap_medium ,open_sans, sans-serif;
+            font-size: 18px;
+            color: orange;
+            padding: 0;
+        }
+    }
+    .borderRowTop{
+        border:0.1px;
+        border-top-color: gray;
+        border-top-style: solid;
+        text-align: center;
+        align-items: center;
+    }
+    .borderRowBottom{
+        border:0.1px;
+        border-bottom-color: gray;
+        border-bottom-style: solid;
+        text-align: center;
+        align-items: center;
+    }
+    .gridColumns{
+        border:0.1px;
+        border-right-color: gray;
+        border-right-style: solid;
+    }
+    .carSize{
+        width: 50%;
+    }
+    
+    .rowArrows{
+        text-align: center;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: open_sans, sans-serif;
+        font-size: 13px;
+        img{
+            width: 10%;
+        }
+        
+    }
+}
+
+

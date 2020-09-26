@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import logo from '../assets/images/logoPM.jpg'
 import imageScanMobileQR from '../assets/images/scanmobile.png'
 import '../assets/styles/components/head_foo_scanQR.css';
@@ -6,6 +6,8 @@ import Footer from '../components/Footer'
 
 class ScanQR extends Component {
     render() {
+        var React = require('react');
+        var QRCode = require('qrcode.react');
         return (
             <div className='container'>
                 <div className="d-flex flex-column flex-md-row align-items-center p-6 px-md-0 mb-1 bg-white">
@@ -51,7 +53,7 @@ class ScanQR extends Component {
                                 </div>
                             </div>
                         </div>
-                        
+                        <QRCode value="http://facebook.com" />
                         <div className='col-sm-4 col-xl'>
                             <div className='row'>
                                 <img className='imageScanMobileQR' src={imageScanMobileQR} alt='Scan Qr'/>
