@@ -11,7 +11,7 @@ class HeaderAndFooter extends Component {
             <div style={{ backgroundColor: 'white' }} >
                 <Header /> {/* Header component jsx */}
 
-                <GridParking letter="j" number="5" />
+                <GridParking letter="A" number="0" />
 
                 <Footer /> {/* Footer component jsx */}
 
