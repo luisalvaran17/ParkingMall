@@ -8,13 +8,13 @@ import GridParking from '../components/GridParking'
 class HeaderAndFooter extends Component {
     render() {
         return (
-            <div style={{backgroundColor:'white'}} >
+            <div style={{ backgroundColor: 'white' }} >
                 <Header /> {/* Header component jsx */}
 
-                <GridParking />
-                
+                <GridParking letter="j" number="5" />
+
                 <Footer /> {/* Footer component jsx */}
-                
+
             </div>
         );
     }
