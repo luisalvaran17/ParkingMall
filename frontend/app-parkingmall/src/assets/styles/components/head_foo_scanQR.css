@@ -142,12 +142,12 @@ body {
   font-family: asap_medium;
   color: #aeb5cc;
   font-weight: 900;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .marginContainerScanQR .contenedorEspacioAsignado h4 {
-  font-family: asap_medium;
-  font-size: 20px;
+  font-family: open_sans, sans-serif;
+  font-size: 18px;
 }
 
 .marginContainerScanQR .imageScanMobileQR {
