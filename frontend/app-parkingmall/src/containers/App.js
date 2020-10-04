@@ -6,7 +6,7 @@ import HeaderAndFooter from '../containers/HeaderAndFooter';
 const App = () => {
     return (
         <div>
-            <HeaderAndFooter />
+            <Login />
         </div>
     )
 }

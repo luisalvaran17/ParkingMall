@@ -1,13 +1,18 @@
 # todos/serializers.py
 from rest_framework import serializers
-from .models import Todo
+from django.contrib.auth.models import User
+from rest_framework.authtoken.models import Token
 
 
-class TodoSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = (
-            'id',
-            'title',
-            'description',
-        )
-        model = Todo
+        model = User
+        fields = ['id', 'username', 'password']
+        # hide password 
+        extra_kwargs = {'password': {'write_only': True, 'required': True}}
+
+        def create(self, validated_data):
+            user = User.objects.create_user(**validated_data)
+            Token.objects.create(user=user)
+            return user
+
