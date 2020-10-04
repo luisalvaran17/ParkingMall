@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 class ScanQR extends Component {
     state = {
-        cadenaEspacioAsignar: ["1", "2", "3"]
+        cadenaEspacioAsignar: ["1", "3", "3"]
     };
     
     convertirCadena = () => {

@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap");
+@font-face {
+  font-family: asap_medium;
+  src: url(../../fonts/Asap-Medium.ttf);
+}
+
+@font-face {
+  font-family: open_sans;
+  src: url(../../fonts/OpenSans-Light.ttf);
+}
+
+.parking {
+  padding-bottom: 2%;
+  background-color: white;
+  font-family: open_sans, sans-serif;
+  font-size: 13px;
+}
+
+.parking .rowPiso {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parking .rowPiso h5, .parking .rowPiso .titlePiso {
+  margin-top: 10px;
+  font-family: asap_medium ,open_sans, sans-serif;
+  font-size: 18px;
+  color: orange;
+  padding: 0;
+}
+
+.parking .borderRowTop {
+  border: 0.1px;
+  border-top-color: gray;
+  border-top-style: solid;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parking .borderRowBottom {
+  border: 0.1px;
+  border-bottom-color: gray;
+  border-bottom-style: solid;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parking .gridColumns {
+  border: 0.1px;
+  border-right-color: gray;
+  border-right-style: solid;
+}
+
+.parking .carSize {
+  width: 100px;
+}
+
+.parking .rowArrows {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: open_sans, sans-serif;
+  font-size: 13px;
+}
+
+.parking .rowArrows img {
+  width: 10%;
+}
+/*# sourceMappingURL=render_parking.css.map */
