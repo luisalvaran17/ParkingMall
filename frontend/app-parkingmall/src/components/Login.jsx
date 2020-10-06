@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import logo from "../assets/images/logoPM.jpg";
-import "../assets/styles/components/Login.scss";
+import "../assets/styles/components/Login.css";
 
 class Login extends Component {
 
