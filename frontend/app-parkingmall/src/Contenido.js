@@ -3,7 +3,6 @@ import './assets/styles/components/Contenido.css'
 import RenderParking from './components/RenderParking'
 import SideBar from './components/SideBar';
 import Grid from '@material-ui/core/Grid';
-import InfoGeneral from './components/InfoGeneral';
 
 class Contenido extends React.Component {
   render() {
@@ -14,11 +13,6 @@ class Contenido extends React.Component {
         </Grid>
         <Grid item xs={8}>
           <RenderParking />
-        </Grid>
-        <Grid item xs={3}>
-        </Grid>
-        <Grid item xs={8}>
-          <InfoGeneral/>
         </Grid>
       </Grid>
     );
