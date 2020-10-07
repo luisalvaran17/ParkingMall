@@ -1,19 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import imgCarUp from "../assets/images/imgCarUp.jpg";
 import special from "../assets/images/Discapacidad.jpg";
 import imgArrowLeft from "../assets/images/arrow_left.png";
 import imgArrowRight from "../assets/images/arrow_right.png";
 import available from "../assets/images/1200px-Check_green_icon.svg.png";
 import available2 from "../assets/images/available2.jpg";
+import InfoGeneral from './InfoGeneral'
 
 class RenderParking extends Component {
   constructor(props){
     super(props);
-    this.state = {carMatrix: [[],[],[],[]], carList1:[], carList2:[], carList3:[], carList4:[] };
+    this.state = {carMatrix: [[],[],[],[]], carList1:[], carList2:[], carList3:[], carList4:[], 
+      carValue:{carAvailable: 0, carReserved: 0,carNumber:0}};
   }
 
   randomGenerator(){
     let random = 0 
+
+    this.state.carValue.carAvailable= 0
+    this.state.carValue.carReserved= 0
+    this.state.carValue.carNumber=0
+    
     for (let i = 0; i < this.state.carMatrix.length; i++) {
       for (let j = 0; j < (this.state.carMatrix.length)*2; j++) {
         if( ((i === 0 && j === 0) || (i === 0 && j === 1)) ||
@@ -23,18 +30,33 @@ class RenderParking extends Component {
             )
           {
           random = Math.floor(Math.random() * (0 - 2)) + 2; 
-          if (random !== 1)    
-          this.state.carMatrix[i][j] = random
+          if (random !== 1)   { 
+            this.state.carValue.carReserved+=1
+            this.state.carMatrix[i][j] = random
+          }
           else{
+            this.state.carValue.carNumber+=1
             this.state.carMatrix[i][j] = 2
           }
         }
         else{
          random = Math.floor(Math.random() * (1 - 3)) + 3;
          this.state.carMatrix[i][j] = random 
+
+         if(this.state.carMatrix[i][j]==2){
+          this.state.carValue.carNumber+=1
+         }
+         else{
+          this.state.carValue.carAvailable+=1
+         }
         }
       }
     }
+
+    console.log("Reservados "+ this.state.carValue.carReserved)
+    console.log("Disponibles "+ this.state.carValue.carAvailable)
+    console.log("Número de autos "+ this.state.carValue.carNumber)
+
     return(
       this.updateState(this.state.carMatrix)
     ) 
@@ -126,8 +148,8 @@ class RenderParking extends Component {
 
   render(){
     return(
-      
       <div className="container parking">
+
         <div className="row borderRowTop">{this.state.carList1}</div>
 
         <div className="row rowArrows">
@@ -164,6 +186,10 @@ class RenderParking extends Component {
         <div className="row" style={{ marginTop: "20px" }}>
           Salida | Entrada
         </div>*/}
+
+      <InfoGeneral
+        car={this.state.carValue}
+      />
     </div>
     );
   }
