@@ -3,38 +3,37 @@ import logo from "../assets/images/logoPM.jpg";
 import "../assets/styles/components/Login.css";
 
 class Login extends Component {
-
   state = {
     credentials: {
-      username: '',
-      password: '',
-    }
-  }
+      username: "",
+      password: "",
+    },
+  };
 
   handleClick = (e) => {
     // console.log(this.state.credentials)
-    fetch('http://127.0.0.1:8000/auth/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(this.state.credentials)
-    }).then(
-      data => {
+    fetch("http://127.0.0.1:8000/auth/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(this.state.credentials),
+    })
+      .then((data) => {
         console.log(data);
-      }
-    ).catch(error => console.error(error))
-  }
+      })
+      .catch((error) => console.error(error));
+  };
 
   handleChange = (e) => {
     const cred = this.state.credentials;
     cred[e.target.name] = e.target.value;
     this.setState({ credentials: cred });
-  }
+  };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submitted')
-    console.log(this.state)
-  }
+    console.log("submitted");
+    console.log(this.state);
+  };
 
   render() {
     return (
@@ -63,11 +62,16 @@ class Login extends Component {
               value={this.state.credentials.password}
               onChange={this.handleChange}
             />
-            <input type="submit" className="fadeIn fourth" value="Log In" onClick={this.handleClick} />
+            <input
+              type="submit"
+              className="fadeIn fourth"
+              value="Log In"
+              onClick={this.handleClick}
+            />
           </form>
 
           <div id="formFooter">
-            <a className="underlineHover" href="">
+            <a className="underlineHover" href="#">
               Forgot Password?
             </a>
           </div>
