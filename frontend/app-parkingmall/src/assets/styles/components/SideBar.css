@@ -3,7 +3,7 @@
 
 h1{
     font-family: 'Asap', sans-serif;
-    float: left;
+    /* float: left; */
     margin-left: 8%;
     margin-right: 1%;
     color: gray;
@@ -22,12 +22,12 @@ h4{
 
 h5{
     font-family: 'Asap Condensed', sans-serif;
-    float: left;
+    /* float: left; */
 }
 
 h6{
     font-family: 'Asap Condensed', sans-serif;
-    float: left;
+    /* float: left; */
 }
 
 #zona{
@@ -42,18 +42,4 @@ h6{
     color: orange;
     text-decoration: none;
     display: block;
-}
-
-.switches{
-    padding-left: 16%;
-}
-
-img{
-    padding-top: 8%;
-    padding-left: 14%;
-    float: left;
-}
-
-#imagen{
-    padding-left: 8%;
 }

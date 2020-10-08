@@ -4,10 +4,10 @@ import Grid from '@material-ui/core/Grid';
 import '../assets/styles/components/InfoGeneral.css';
 
 class InfoGeneral extends React.Component {
-
   render(){
     return (
       <Grid item xs>
+
           <br/>
           <h3><center>Información general</center></h3>
         <Divider variant="middle" />
@@ -16,7 +16,9 @@ class InfoGeneral extends React.Component {
               <div><h2>{this.props.car.carReserved} </h2> <h6><br/><center>Lugares <br/> reservados</center></h6></div>
               <div><h2>{this.props.car.carNumber} </h2> <h6><br/><center>Total <br/> vehículos</center></h6></div>
           </div>
+          
       </Grid>
+      
     );
   }
 }
