@@ -9,13 +9,18 @@ import FormControl from '@material-ui/core/FormControl';
 import discapacidad from "../assets/images/Discapacidad_opt.jpg";
 import candado from "../assets/images/Candado_opt.png";
 import '../assets/styles/components/SideBar.css';
+import RenderParking from '../components/RenderParking'
 
 class SideBar extends React.Component {
   
   state={
-    reservedSwitch:true,
-    availableSwitch:true
+    reservedSwitch:false,
+    availableSwitch:false
   }
+
+  handleChange = (event) => {
+    this.setState({ ...this.state, [event.target.name]: event.target.checked });
+  };
 
   render() {
     const preventDefault = (event) => event.preventDefault();
@@ -55,15 +60,18 @@ class SideBar extends React.Component {
                 <img src={discapacidad} alt='' />
                 <br/>
                 <FormControlLabel
-                  control={<Switch checked={this.state.reservedSwitch} color="primary" name="reservedSwitch"/>}
+                  control={<Switch checked={this.state.reservedSwitch} onChange={this.handleChange} color="primary" name="reservedSwitch"/>}
                 />
+                {console.log(this.state.reservedSwitch)}
               </div>
               <div>
                 <img src={candado} id='imagen' alt=''/>
                 <br/>
                 <FormControlLabel
-                  control={<Switch checked={this.state.availableSwitch} color='secondary' name="availableSwitch"/>}
+                  control={<Switch checked={this.state.availableSwitch} onChange={this.handleChange} color='secondary' name="availableSwitch"/>}
                 />
+                {console.log(this.state.availableSwitch)}
+                
               </div>
             </FormGroup>
           </FormControl>
