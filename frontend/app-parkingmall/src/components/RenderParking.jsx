@@ -53,10 +53,6 @@ class RenderParking extends Component {
       }
     }
 
-    console.log("Reservados "+ this.state.carValue.carReserved)
-    console.log("Disponibles "+ this.state.carValue.carAvailable)
-    console.log("Número de autos "+ this.state.carValue.carNumber)
-
     return(
       this.updateState(this.state.carMatrix)
     ) 
@@ -86,6 +82,23 @@ class RenderParking extends Component {
 
     this.setState({carList1: carListLocal1, carList2: carListLocal2,
       carList3: carListLocal3, carList4: carListLocal4})
+    
+  }
+
+  gridReserved(matrixUpdate){
+    for (let i = 0; i < this.state.carMatrix.length; i++) {
+      for (let j = 0; j < (this.state.carMatrix.length)*2; j++) {
+
+      }
+    }
+  }
+
+  gridAvailable(matrixUpdate){
+    for (let i = 0; i < this.state.carMatrix.length; i++) {
+      for (let j = 0; j < (this.state.carMatrix.length)*2; j++) {
+        console.log(this.state.carList1[0])
+      }
+    }
   }
 
   setListCars(listLabelCars, letter, number){
@@ -143,6 +156,7 @@ class RenderParking extends Component {
           );
       }
     }
+    
     return carList
   }
 
@@ -175,14 +189,7 @@ class RenderParking extends Component {
         </div>
 
         <div className="row borderRowBottom">{this.state.carList4}</div>
-        {/*<div>
-          <button className="btn btn-info" type="button">
-          available
-          </button>
-          <button className="btn btn-danger" type="button">
-            Special people
-          </button>
-        </div>
+        {/*
         <div className="row" style={{ marginTop: "20px" }}>
           Salida | Entrada
         </div>*/}

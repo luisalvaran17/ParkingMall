@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
@@ -11,8 +11,15 @@ import candado from "../assets/images/Candado_opt.png";
 import '../assets/styles/components/SideBar.css';
 
 class SideBar extends React.Component {
+  
+  state={
+    reservedSwitch:true,
+    availableSwitch:true
+  }
+
   render() {
     const preventDefault = (event) => event.preventDefault();
+
     return (
       <MenuList>
         <br/>
@@ -40,6 +47,7 @@ class SideBar extends React.Component {
           </Link>
         </MenuItem>
         
+
         <div className="switches">
           <FormControl component="fieldset">
             <FormGroup aria-label="position" row>
@@ -47,14 +55,14 @@ class SideBar extends React.Component {
                 <img src={discapacidad} alt='' />
                 <br/>
                 <FormControlLabel
-                  control={<Switch color="primary" />}
+                  control={<Switch checked={this.state.reservedSwitch} color="primary" name="reservedSwitch"/>}
                 />
               </div>
               <div>
-                <img src={candado} id='imagen' alt='' />
+                <img src={candado} id='imagen' alt=''/>
                 <br/>
                 <FormControlLabel
-                  control={<Switch color='secondary' />}
+                  control={<Switch checked={this.state.availableSwitch} color='secondary' name="availableSwitch"/>}
                 />
               </div>
             </FormGroup>
