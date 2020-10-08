@@ -10,13 +10,13 @@ function Header(){
             <a className="navbar-brand" href="!#">
                 <img src={logo} style={{width:"60px"}} alt="logo app"/>
             </a>
-            <h5 className="tittleBrand my-0 mr-md-auto">ParkingMall</h5>
+            <Link to="/" className="tittleBrand my-0 mr-md-auto">ParkingMall</Link>
             <nav className="my-2 my-md-0 mr-md-3 textNav">
 
-                <Link to="/ScanQR"> ScanQR</Link>
+                <Link to="/ScanQR" className="p-2 text-dark"> ScanQR</Link>
+                <Link to="/" className="p-2 text-dark"> Username</Link>
                 
-                <a className="p-2 text-dark" href="!#"></a>
-                <a className="p-2 text-dark">Username</a>
+
             </nav>
             <Dropdown>
             <Dropdown.Toggle variant="" id="">
@@ -25,7 +25,7 @@ function Header(){
 
             <Dropdown.Menu>
                 <Dropdown.Item>
-                    <Link to="/Login"> Cerrar Sesión </Link>
+                    <Link to="/Login" className="p-2 text-dark"> Cerrar Sesión </Link>
                     </Dropdown.Item>
             </Dropdown.Menu>
             </Dropdown>

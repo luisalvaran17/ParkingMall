@@ -3,6 +3,7 @@ import logo from '../assets/images/logoPM.jpg'
 import imageScanMobileQR from '../assets/images/scanMobile.png'
 import '../assets/styles/components/head_foo_scanQR.css';
 import Footer from '../components/Footer' 
+import {Link} from 'react-router-dom'
 
 class ScanQR extends Component {
     state = {
@@ -37,7 +38,7 @@ class ScanQR extends Component {
                         <div className='marginContainerScanQR' >
                             <div className='col-sm' style={{padding:'0', textAlign:'center'}}>
                                 <img className='logoParkingMall' src={logo} alt=""/>
-                                <h5 className="tittleBrand my-0 mr-md-auto">ParkingMall</h5>
+                                <Link to="/" className="tittleBrand my-0 mr-md-auto">ParkingMall</Link>
                             </div>
                         </div>
                     </div>
