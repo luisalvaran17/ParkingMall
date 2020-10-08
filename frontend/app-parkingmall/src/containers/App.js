@@ -10,9 +10,10 @@ const App = () => (
     
         <BrowserRouter>
         
+            <Route exact path="/" component={HeaderAndFooter} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/ScanQR" component={ScanQR} />
-            <Route exact path="" component={HeaderAndFooter} />
+            
 
         
         </BrowserRouter>
