@@ -2,6 +2,7 @@ import React  from 'react';
 import logo from '../assets/images/logoPM.jpg'
 import userLogo from '../assets/images/logo_usuario.jpg';
 import Dropdown from 'react-bootstrap/Dropdown';
+import {Link} from 'react-router-dom'
 
 function Header(){
     return(
@@ -11,7 +12,9 @@ function Header(){
             </a>
             <h5 className="tittleBrand my-0 mr-md-auto">ParkingMall</h5>
             <nav className="my-2 my-md-0 mr-md-3 textNav">
-                <a className="p-2 text-dark" href="!#">Scan QR</a>
+
+                <Link to="/ScanQR"> ScanQR</Link>
+                
                 <a className="p-2 text-dark" href="!#"></a>
                 <a className="p-2 text-dark">Username</a>
             </nav>
@@ -21,7 +24,9 @@ function Header(){
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                <Dropdown.Item href="!#/action-3">Cerrar sesión</Dropdown.Item>
+                <Dropdown.Item>
+                    <Link to="/Login"> Cerrar Sesión </Link>
+                    </Dropdown.Item>
             </Dropdown.Menu>
             </Dropdown>
         </div>
