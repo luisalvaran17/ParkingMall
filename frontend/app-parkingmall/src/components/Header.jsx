@@ -10,7 +10,7 @@ function Header(){
             <a className="navbar-brand" href="!#">
                 <img src={logo} style={{width:"60px"}} alt="logo app"/>
             </a>
-            <Link to="/" className="tittleBrand my-0 mr-md-auto">ParkingMall</Link>
+            <Link to="/" className="titleBrand my-0 mr-md-auto">ParkingMall</Link>
             <nav className="my-2 my-md-0 mr-md-3 textNav">
 
                 <Link to="/ScanQR" className="p-2 text-dark" target="_blank" onClick={(event) => {event.preventDefault(); 

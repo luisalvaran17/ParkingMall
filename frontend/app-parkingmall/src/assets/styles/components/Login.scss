@@ -1,5 +1,16 @@
 
 /* BASIC */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap');
+@font-face {
+    font-family: asap_medium;
+    src: url(../../fonts/Asap-Medium.ttf);
+  }
+@font-face {
+    font-family: open_sans;
+    src: url(../../fonts/OpenSans-Light.ttf);
+  }
+
 
 html {
     background-color: #56baed;
@@ -26,8 +37,13 @@ html {
     margin: 40px 8px 10px 8px; 
     color: #cccccc;
   }
-  
-  
+  .titleBrand{
+    font-family: 'asap_medium', sans-serif;
+    color: #eea236;
+    font-weight:bold;
+    font-size: 150px;
+    padding: 30px;
+}
   
   /* STRUCTURE */
   
@@ -40,6 +56,7 @@ html {
     min-height: 100%;
     padding: 20px;
   }
+  
   
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
@@ -145,7 +162,36 @@ html {
   input[type=text]:placeholder {
     color: #cccccc;
   }
+
+  input[type=password] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
   
+  input[type=password]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+  }
+  
+  input[type=password]:placeholder {
+    color: #cccccc;
+  }
   
   
   /* ANIMATIONS */

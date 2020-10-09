@@ -1,4 +1,16 @@
 /* BASIC */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap");
+@font-face {
+  font-family: asap_medium;
+  src: url(../../fonts/Asap-Medium.ttf);
+}
+
+@font-face {
+  font-family: open_sans;
+  src: url(../../fonts/OpenSans-Light.ttf);
+}
+
 html {
   background-color: #56baed;
 }
@@ -23,6 +35,14 @@ h2 {
   display: inline-block;
   margin: 40px 8px 10px 8px;
   color: #cccccc;
+}
+
+.titleBrand {
+  font-family: 'asap_medium', sans-serif;
+  color: #eea236;
+  font-weight: bold;
+  font-size: 150px;
+  padding: 30px;
 }
 
 /* STRUCTURE */

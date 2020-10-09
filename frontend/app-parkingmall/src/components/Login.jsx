@@ -40,6 +40,11 @@ class Login extends Component {
     return (
       <div className="wrapper fadeInDown">
         <div id="formContent">
+          
+          <div className="fadeIn first">
+            <h3 className="titleBrand">ParkingMall</h3>
+          </div>
+
           <div className="fadeIn first">
             <img src={logo} id="icon" alt="User Icon" />
           </div>
@@ -50,7 +55,7 @@ class Login extends Component {
               id="login"
               className="fadeIn second"
               name="username"
-              placeholder="username"
+              placeholder="Nombre de usuario"
               onChange={this.handleChange}
               value={this.state.credentials.username}
             />
@@ -59,16 +64,17 @@ class Login extends Component {
               id="password"
               className="fadeIn third pass"
               name="password"
-              placeholder="password"
+              placeholder="Contraseña"
               value={this.state.credentials.password}
               onChange={this.handleChange}
             />
-            <input
+            <button 
               type="submit"
-              className="fadeIn fourth"
+              className="btn btn-warning btn-xl fadeIn fourth"
+              style={{padding:"10px", paddingLeft:"70px", paddingRight:"70px", marginTop:"30px", marginBottom:"30px"}}
               value="Log In"
               onClick={this.handleClick}
-            />
+              text="Ingresar">Ingresar</button>
           </form>
 
           <div id="formFooter">

@@ -7,7 +7,7 @@ export default function Footer1(){
             <footer className="container py-5 "  style={{backgroundColor:"#edf0f4"}}> 
                 <div className="row textTitles">
                     <div className="col-12 col-md">
-                    <h5 className="tittleBrand my-0 mr-md-auto">ParkingMall</h5>
+                    <h5 className="titleBrand my-0 mr-md-auto">ParkingMall</h5>
                     <p className="my-0 mr-md-auto">© Copyright 2020</p>
                     </div>
                     <div className="col-6 col-md">
