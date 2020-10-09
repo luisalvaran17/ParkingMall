@@ -27,6 +27,7 @@ class Login extends Component {
     const cred = this.state.credentials;
     cred[e.target.name] = e.target.value;
     this.setState({ credentials: cred });
+    console.log(e.target.value);
   };
 
   handleSubmit = (e) => {
@@ -49,12 +50,12 @@ class Login extends Component {
               id="login"
               className="fadeIn second"
               name="username"
-              placeholder="login"
+              placeholder="username"
               onChange={this.handleChange}
               value={this.state.credentials.username}
             />
             <input
-              type="text"
+              type="password"
               id="password"
               className="fadeIn third pass"
               name="password"
