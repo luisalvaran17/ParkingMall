@@ -17,7 +17,7 @@ class RenderParking extends Component {
   constructor(props) {
     super(props);
     this.state = {carMatrix: [[],[],[],[]], carList1:[], carList2:[], carList3:[], carList4:[], 
-      carValue:{carAvailable: 0, carReserved: 0,carNumber:0}, reservedSwitch:true,availableSwitch:true};
+      carValue:{carAvailable: 0, carReserved: 0,carNumber:0}, reservedSwitch:false,availableSwitch:false};
   }
 
   randomGenerator() {
