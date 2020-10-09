@@ -92,8 +92,13 @@ class RenderParking extends Component {
     // (matrixReserverd)
     if(this.state.reservedSwitch === true && this.state.availableSwitch === false){
       for (let i = 0; i < carMatrix.length; i++) {
-        for (let j = 2; j < (carMatrix.length)*2; j++) {  // inicia en la columna 2, pone en blanco los que no corresponden a zona azul
+        for (let j = 0; j < (carMatrix.length)*2; j++) {  // inicia en la columna 2, pone en blanco los que no corresponden a zona azul
+          if(carMatrixReserved[i][j]===2){
             carMatrixReserved[i][j] = 4
+          }
+          else if(carMatrixReserved[i][j]===1){
+            carMatrixReserved[i][j] = 4
+          }
         } 
       }
       this.updateInfoGeneral(carMatrixReserved) // actualiza los valores de la info general llamando esta fn

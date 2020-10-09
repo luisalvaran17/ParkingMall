@@ -38,7 +38,7 @@ class ScanQR extends Component {
                         <div className='marginContainerScanQR' >
                             <div className='col-sm' style={{padding:'0', textAlign:'center'}}>
                                 <img className='logoParkingMall' src={logo} alt=""/>
-                                <Link to="/" className="tittleBrand my-0 mr-md-auto">ParkingMall</Link>
+                                <Link to="/" className="titleBrand my-0 mr-md-auto">ParkingMall</Link>
                             </div>
                         </div>
                     </div>
