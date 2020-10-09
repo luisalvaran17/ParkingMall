@@ -13,7 +13,8 @@ function Header(){
             <Link to="/" className="tittleBrand my-0 mr-md-auto">ParkingMall</Link>
             <nav className="my-2 my-md-0 mr-md-3 textNav">
 
-                <Link to="/ScanQR" className="p-2 text-dark"> ScanQR</Link>
+                <Link to="/ScanQR" className="p-2 text-dark" target="_blank" onClick={(event) => {event.preventDefault(); 
+                window.open(window.location.origin + "/ScanQR");}}> ScanQR</Link>
                 <Link to="/" className="p-2 text-dark"> Username</Link>
                 
 
