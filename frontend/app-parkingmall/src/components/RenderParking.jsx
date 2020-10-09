@@ -12,6 +12,8 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import discapacidad from "../assets/images/Discapacidad_opt.jpg";
 import candado from "../assets/images/Candado_opt.png";
+import SideBar from "../components/SideBar";
+import Grid from "@material-ui/core/Grid";
 
 class RenderParking extends Component {
   constructor(props) {
@@ -256,9 +258,11 @@ class RenderParking extends Component {
 
   render() {
     return (
-      <div className="container parking">
-        <div>
-          <center>
+      <Grid container spacing={3}>
+        <Grid item xs={3}>
+          <SideBar />
+        <div className="switchesClass">
+          <br/>
           <FormControl component="fieldset">
             <FormGroup aria-label="position" row>
               <div>
@@ -277,10 +281,13 @@ class RenderParking extends Component {
               </div>
             </FormGroup>
           </FormControl>
-          </center>
         </div>
-
-
+        
+        </Grid>
+        <Grid item xs={8}>
+        
+        
+        <div className="container parking">
         <div className="row borderRowTop">{this.state.carList1}</div>
 
         <div className="row rowArrows">
@@ -313,6 +320,8 @@ class RenderParking extends Component {
 
         <InfoGeneral car={this.state.carValue} />
       </div>
+      </Grid>
+      </Grid>
     );
   }
   componentDidMount() {
