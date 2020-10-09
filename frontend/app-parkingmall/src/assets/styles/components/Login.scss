@@ -42,7 +42,7 @@ html {
     color: #eea236;
     font-weight:bold;
     font-size: 150px;
-    padding: 30px;
+    padding-top: 30px;
 }
   
   /* STRUCTURE */
@@ -52,6 +52,7 @@ html {
     align-items: center;
     flex-direction: column; 
     justify-content: center;
+    font-family: asap_medium, sans-serif;
     width: 100%;
     min-height: 100%;
     padding: 20px;
@@ -82,8 +83,6 @@ html {
     display: none;
   }
   
-  
-  
   /* TABS */
   
   h2.inactive {
@@ -94,8 +93,6 @@ html {
     color: #0d0d0d;
     border-bottom: 2px solid #5fbae9;
   }
-  
-  
   
   /* FORM TYPOGRAPHY*/
   
@@ -124,7 +121,6 @@ html {
   input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
     background-color: #39ace7;
   }
-  
   input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
     -moz-transform: scale(0.95);
     -webkit-transform: scale(0.95);

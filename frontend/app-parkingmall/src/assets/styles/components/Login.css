@@ -42,7 +42,7 @@ h2 {
   color: #eea236;
   font-weight: bold;
   font-size: 150px;
-  padding: 30px;
+  padding-top: 30px;
 }
 
 /* STRUCTURE */
@@ -60,6 +60,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: asap_medium, sans-serif;
   width: 100%;
   min-height: 100%;
   padding: 20px;
@@ -118,6 +119,14 @@ input[type=button], input[type=submit], input[type=reset] {
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
   background-color: #39ace7;
+}
+
+.button_login {
+  padding: "10px";
+  padding-left: "70px";
+  padding-right: "70px";
+  margin-top: "30px";
+  margin-bottom: "30px";
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
