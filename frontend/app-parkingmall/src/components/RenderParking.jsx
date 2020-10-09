@@ -16,143 +16,126 @@ import candado from "../assets/images/Candado_opt.png";
 class RenderParking extends Component {
   constructor(props) {
     super(props);
-    this.state = {carMatrix: [[],[],[],[]], carList1:[], carList2:[], carList3:[], carList4:[], 
+    this.state = {carMatrix: [[0,0,1,2,1,1,1,1],
+                              [0,0,1,1,1,1,1,1],
+                              [0,0,1,2,1,1,2,1],
+                              [0,0,1,2,1,2,1,1]] , 
+                              carList1:[], carList2:[], carList3:[], carList4:[], 
       carValue:{carAvailable: 0, carReserved: 0,carNumber:0}, reservedSwitch:false,availableSwitch:false};
   }
-
-  randomGenerator() {
-    let random = 0;
-
-    this.setState({
-      carValue: { carAvailable: 0, carReserved: 0, carNumber: 0 },
-    });
-
-    this.state.carValue.carAvailable= 0
-    this.state.carValue.carReserved= 0
-    this.state.carValue.carNumber=0
-
-    if(this.state.reservedSwitch===false && this.state.availableSwitch===true){
-      for (let i = 0; i < this.state.carMatrix.length; i++) {
-        for (let j = 0; j < (this.state.carMatrix.length)*2; j++) {
-          if( ((i === 0 && j === 0) || (i === 0 && j === 1)) ||
-              ((i === 1 && j === 0) || (i === 1 && j === 1)) ||
-              ((i === 2 && j === 0) || (i === 2 && j === 1)) ||
-              ((i === 3 && j === 0) || (i === 3 && j === 1))
-              )
-            {
-              this.state.carMatrix[i][j] = 4
-          }
-          else{
-          random = Math.floor(Math.random() * (1 - 3)) + 3;
-          this.state.carMatrix[i][j] = random 
-
-          if(this.state.carMatrix[i][j]==2){
-            this.state.carMatrix[i][j] = 4
-          }
-          else{
-            this.state.carValue.carAvailable+=1
-          }
-          }
-        }
-      }
-    }
-    else if(this.state.availableSwitch===false && this.state.reservedSwitch===true){
-      for (let i = 0; i < this.state.carMatrix.length; i++) {
-        for (let j = 0; j < (this.state.carMatrix.length)*2; j++) {
-          if( ((i === 0 && j === 0) || (i === 0 && j === 1)) ||
-              ((i === 1 && j === 0) || (i === 1 && j === 1)) ||
-              ((i === 2 && j === 0) || (i === 2 && j === 1)) ||
-              ((i === 3 && j === 0) || (i === 3 && j === 1))
-              )
-            {
-            random = Math.floor(Math.random() * (0 - 2)) + 2; 
-            if (random !== 1)   { 
-              this.state.carValue.carReserved+=1
-              this.state.carMatrix[i][j] = random
-            }
-            else{
-              this.state.carValue.carNumber+=1
-              this.state.carMatrix[i][j] = 4
-            }
-          }
-          else{
-            this.state.carMatrix[i][j] = 4
-          }
-        }
-      }
-    }
-    else if(this.state.availableSwitch===true && this.state.reservedSwitch===true){
-      for (let i = 0; i < this.state.carMatrix.length; i++) {
-        for (let j = 0; j < (this.state.carMatrix.length)*2; j++) {
-          if( ((i === 0 && j === 0) || (i === 0 && j === 1)) ||
-              ((i === 1 && j === 0) || (i === 1 && j === 1)) ||
-              ((i === 2 && j === 0) || (i === 2 && j === 1)) ||
-              ((i === 3 && j === 0) || (i === 3 && j === 1))
-              )
-          {
-            random = Math.floor(Math.random() * (0 - 2)) + 2; 
-            if (random !== 1)   { 
-              this.state.carValue.carReserved+=1
-              this.state.carMatrix[i][j] = random
-            }
-            else{
-              this.state.carValue.carNumber+=1
-              this.state.carMatrix[i][j] = 4
-            }
-          }
-          else{
-            random = Math.floor(Math.random() * (1 - 3)) + 3;
-            this.state.carMatrix[i][j] = random 
   
-            if(this.state.carMatrix[i][j]==2){
-              this.state.carMatrix[i][j] = 4
-            }
-            else{
-              this.state.carValue.carAvailable+=1
-            }
-          }
-        }
+  randomGenerator() {
+    let random = Math.floor(Math.random() * (1 - 3)) + 3;
+    let indexRandom_I = Math.floor(Math.random() * (0 - 4)) + 4;
+    let indexRandom_J = Math.floor(Math.random() * (0 - 8)) + 8;
+
+    // vars general info 
+    let carAvailable = 0
+    let carReserved = 0
+    let carNumber = 0
+
+    // initialize matrices  
+    let carMatrix =  this.state.carMatrix
+    let carMatrixAvalaible = [[0,0,1,2,1,1,1,1],
+                              [0,0,1,1,1,1,1,1],
+                              [0,0,1,2,1,1,2,1],
+                              [0,0,1,2,1,2,1,1]]
+    let carMatrixReserved = [[0,0,1,2,1,1,1,1],
+                            [0,0,1,1,1,1,1,1],
+                            [0,0,1,2,1,1,2,1],
+                            [0,0,1,2,1,2,1,1]]
+                             
+    for (let i = 0; i < carMatrix.length; i++) {
+      for (let j = 0; j < (carMatrix.length)*2; j++) {
+        carMatrixAvalaible[i][j] = carMatrix[i][j]
+        carMatrixReserved[i][j] = carMatrix[i][j] 
       }
     }
+
+    // position update
+    if( ((indexRandom_I === 0 && indexRandom_J === 0) || (indexRandom_I === 0 && indexRandom_J === 1)) || // condicional lugares zona azul
+        ((indexRandom_I === 1 && indexRandom_J === 0) || (indexRandom_I === 1 && indexRandom_J === 1)) ||
+        ((indexRandom_I === 2 && indexRandom_J === 0) || (indexRandom_I === 2 && indexRandom_J === 1)) ||
+        ((indexRandom_I === 3 && indexRandom_J === 0) || (indexRandom_I === 3 && indexRandom_J === 1)) ){
+        if(carMatrix[indexRandom_I][indexRandom_J] === 0){
+          carMatrix[indexRandom_I][indexRandom_J] = 2  // pone un carro
+        }
+        else{
+          carMatrix[indexRandom_I][indexRandom_J] = 0 // pone disponible
+        }
+    }
+    // Resto de lugares (no zona azul), columnas (i>0 , j>2)
     else{
-      for (let i = 0; i < this.state.carMatrix.length; i++) {
-        for (let j = 0; j < (this.state.carMatrix.length)*2; j++) {
-          if( ((i === 0 && j === 0) || (i === 0 && j === 1)) ||
-              ((i === 1 && j === 0) || (i === 1 && j === 1)) ||
-              ((i === 2 && j === 0) || (i === 2 && j === 1)) ||
-              ((i === 3 && j === 0) || (i === 3 && j === 1))
-              )
-            {
-            random = Math.floor(Math.random() * (0 - 2)) + 2; 
-            if (random !== 1)   { 
-              this.state.carValue.carReserved+=1
-              this.state.carMatrix[i][j] = random
-            }
-            else{
-              this.state.carValue.carNumber+=1
-              this.state.carMatrix[i][j] = 2
-            }
-          }
-          else{
-          random = Math.floor(Math.random() * (1 - 3)) + 3;
-          this.state.carMatrix[i][j] = random 
+      if(random !== 0){ // diferente de zona azul
+        carMatrix[indexRandom_I][indexRandom_J] = random
+      }
+      else{
+        // ... nothing
+      }
+    }
+    
+    // Actualiza los estados de la información general
+    this.setState({carValue:{carAvailable: carAvailable, carReserved: carReserved, carNumber: carNumber}})
 
-          if(this.state.carMatrix[i][j]==2){
-            this.state.carValue.carNumber+=1
+    // logica de los switches (matrixAvalaible)
+    if(this.state.reservedSwitch === false && this.state.availableSwitch === true){
+      for (let i = 0; i < carMatrix.length; i++) {
+        for (let j = 0; j < (carMatrix.length)*2; j++) {
+          if(carMatrixAvalaible[i][j] === 2 || carMatrixAvalaible[i][j] === 0){ // los lugares que no estan disponibles los oculta del render
+            carMatrixAvalaible[i][j] = 4 // valor de lugar en blanco
           }
-          else{
-            this.state.carValue.carAvailable+=1
+        } 
+      }
+      this.updateInfoGeneral(carMatrixAvalaible) // actualiza los valores de la info general llamando esta fn
+      return this.updateStateMatrix(carMatrixAvalaible) // retorna el render con la matriz carMatrixAvalaible
+    }
+    // (matrixReserverd)
+    if(this.state.reservedSwitch === true && this.state.availableSwitch === false){
+      for (let i = 0; i < carMatrix.length; i++) {
+        for (let j = 2; j < (carMatrix.length)*2; j++) {  // inicia en la columna 2, pone en blanco los que no corresponden a zona azul
+            carMatrixReserved[i][j] = 4
+        } 
+      }
+      this.updateInfoGeneral(carMatrixReserved) // actualiza los valores de la info general llamando esta fn
+      return this.updateStateMatrix(carMatrixReserved) // retorna el render con la matriz carMatrixReserved
+    }
+
+    if(this.state.reservedSwitch === true && this.state.availableSwitch === true){
+      // logica
+      for (let i = 0; i < carMatrix.length; i++) {
+        for (let j = 0; j < (carMatrix.length)*2; j++) {
+          if(carMatrixAvalaible[i][j] === 2){ // los lugares que no estan disponibles los oculta del render
+            carMatrixAvalaible[i][j] = 4 // valor de lugar en blanco
           }
-          }
+        } 
+      }
+      this.updateInfoGeneral(carMatrixAvalaible) // actualiza los valores de la info general llamando esta fn
+      return this.updateStateMatrix(carMatrixAvalaible)  // retorna el render con la matriz carMatrix (matriz principal)
+    }
+    // (carMatrix) - si ambos switches son false
+    else{
+      this.updateInfoGeneral(carMatrix) // actualiza los valores de la info general llamando esta fn
+      return this.updateStateMatrix(carMatrix)  // retorna el render con la matriz carMatrix (matriz principal)
+    }
+  }  
+
+  updateInfoGeneral(carMatrix){ // recibe cualquier matriz definidas en la otra fn {avalaibles, reserved, all}
+    for (let i = 0; i < carMatrix.length; i++) {
+      for (let j = 0; j < (carMatrix.length)*2; j++) {
+        if (carMatrix[i][j] === 1){ // cuenta los disponibles
+          this.state.carValue.carAvailable +=  1
+        }
+        if (carMatrix[i][j] === 2){ // cuenta el total de carros
+          this.state.carValue.carNumber +=  1
+        }
+        if(carMatrix[i][j]  === 0){
+          this.state.carValue.carReserved += 1
         }
       }
     }
-    return(
-      this.updateState(this.state.carMatrix)
-    ) 
-  } 
+  }
 
-  updateState(matrixUpdate) {
+  updateStateMatrix(matrixUpdate) {
     let listLabels = [[], [], [], []];
     let lenMatrix = matrixUpdate.length;
     for (let i = 0; i < lenMatrix; i++) {
@@ -328,7 +311,7 @@ class RenderParking extends Component {
     );
   }
   componentDidMount() {
-    this.interval = setInterval(() => this.randomGenerator(), 3500);
+    this.interval = setInterval(() => this.randomGenerator(), 1500);
   }
   componentWillUnmount() {
     // clearInterval(this.interval);
