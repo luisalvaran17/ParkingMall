@@ -261,7 +261,7 @@ class RenderParking extends Component {
     return (
       <Grid container spacing={3}>
         <Grid item xs={3} style={{marginLeft:"25px"}}>
-          <SideBar />
+          <SideBar firstZone="true" secondZone="false"/>
           <div className="switchesClass">
             <br/>
               <div>

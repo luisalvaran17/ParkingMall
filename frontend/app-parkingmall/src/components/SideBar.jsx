@@ -13,28 +13,21 @@ class SideBar extends React.Component {
       <MenuList>
         <br />
         <h3>Pisos</h3>
-        <h4>Piso 1</h4>
         <MenuItem>
           <Link href="#" onClick={preventDefault} id="zona">
-            <h5>Zona 1</h5>
+            <h4>Piso 1</h4>
           </Link>
         </MenuItem>
+            <h5 className="disableZone">Zona 1</h5>
+            <h5 className="disableZone">Zona 2</h5>
+        
         <MenuItem>
           <Link href="#" onClick={preventDefault} id="zona">
-            <h5>Zona 2</h5>
+            <h4>Piso 2</h4>
           </Link>
         </MenuItem>
-        <h4>Piso 2</h4>
-        <MenuItem>
-          <Link href="#" onClick={preventDefault} id="zona">
-            <h5>Zona 1</h5>
-          </Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="#" onClick={preventDefault} id="zona">
-            <h5>Zona 2</h5>
-          </Link>
-        </MenuItem>
+            <h5 className="disableZone">Zona 1</h5>
+            <h5 className="disableZone">Zona 2</h5>
       </MenuList>
     );
   }

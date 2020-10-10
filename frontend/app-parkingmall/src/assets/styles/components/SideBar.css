@@ -25,6 +25,10 @@ h5{
     /* float: left; */
 }
 
+.disableZone{
+    padding-left: 24%;
+}
+
 h6{
     font-family: 'Asap Condensed', sans-serif;
     /* float: left; */
@@ -32,7 +36,7 @@ h6{
 
 #zona{
     font-family: 'Asap Condensed', sans-serif;
-    padding-left: 16%;
+    padding-left: 10%;
     text-decoration: none;
     color: black;
     display: block;
