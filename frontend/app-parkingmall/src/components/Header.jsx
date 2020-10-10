@@ -8,7 +8,9 @@ function Header(){
     return(
         <div className="d-flex flex-column flex-md-row align-items-center p-1 px-md-4 mb-3 bg-white border-bottom shadow-sm">
             <a className="navbar-brand" href="!#">
+                <Link to="/">
                 <img src={logo} style={{width:"60px"}} alt="logo app"/>
+                </Link>
             </a>
             <Link to="/" className="titleBrand my-0 mr-md-auto">ParkingMall</Link>
             <nav className="my-2 my-md-0 mr-md-3 textNav">
