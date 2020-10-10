@@ -23,7 +23,7 @@ class SideBar extends React.Component {
         <br />
         <h3>Pisos</h3>
         <MenuItem>
-          <Link href="#" onClick={preventDefault} id="zona">
+          <Link to="/" onClick={preventDefault1} id="zona">
             <h4>Piso 1</h4>
           </Link>
         </MenuItem>
@@ -31,7 +31,7 @@ class SideBar extends React.Component {
             <h5 className="disableZone">Zona 2</h5>
         
         <MenuItem>
-          <Link href="#" onClick={preventDefault} id="zona">
+          <Link to="/piso2" onClick={preventDefault2} id="zona">
             <h4>Piso 2</h4>
           </Link>
         </MenuItem>
@@ -43,14 +43,14 @@ class SideBar extends React.Component {
     else if(this.state.checkPiso === "piso 2"){
       preventDefault1()
       return(
-        <Redirect to="/piso2" className="p-2 text-dark" target="_blank" onClick={(event) => { 
-                window.open( window.location.origin + "/piso2");}}>piso2</Redirect>
+        <Link to="/piso2" className="p-2 text-dark" target="_blank" onClick={(event) => { 
+                window.open();}}>try1</Link>
       )
     }
     else{
       preventDefault2()
       return(
-        <Link to="/"></Link>
+        <Redirect to="/"></Redirect>
       )
     }
   }
