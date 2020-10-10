@@ -1,19 +1,21 @@
 import React, { Component } from "react";
+//Images
 import imgCarUp from "../assets/images/imgCarUp.jpg";
-import special from "../assets/images/Discapacidad.jpg";
+import special from "../assets/images/disability_opt.jpg";
 import imgArrowLeft from "../assets/images/arrow_left.png";
 import imgArrowRight from "../assets/images/arrow_right.png";
 import available from "../assets/images/1200px-Check_green_icon.svg.png";
-import disable from "../assets/images/Disable.png";
-import InfoGeneral from './InfoGeneral';
+import disability from "../assets/images/disability.jpg";
+import padlock from "../assets/images/padlock.png";
+import disable from "../assets/images/disable.png";
+//libraries
 import Switch from "@material-ui/core/Switch";
-import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import discapacidad from "../assets/images/Discapacidad_opt.jpg";
-import candado from "../assets/images/Candado_opt.png";
-import SideBar from "../components/SideBar";
 import Grid from "@material-ui/core/Grid";
+//components
+import GeneralInfo from './GeneralInfo';
+import SideBar from "../components/SideBar";
+
 
 class RenderParking extends Component {
   constructor(props) {
@@ -255,72 +257,66 @@ class RenderParking extends Component {
     this.setState({ ...this.state, [event.target.name]: event.target.checked });
   };
 
-
   render() {
     return (
       <Grid container spacing={3}>
         <Grid item xs={3}>
           <SideBar />
-        <div className="switchesClass">
-          <br/>
-          <FormControl component="fieldset">
-            <FormGroup aria-label="position" row>
+          <div className="switchesClass">
+            <br/>
               <div>
-                <img src={discapacidad} className="switchImg" alt="" />
+                <img src={disability} className="switchImg" alt="" />
                 <br />
                 <FormControlLabel
                   control={<Switch checked={this.state.reservedSwitch} onChange={this.handleChange} color="primary" name="reservedSwitch"/>}
                 />
               </div>
               <div>
-                <img src={candado} className="switchImg" alt="" />
+                <img src={padlock} className="switchImg" alt="" />
                 <br />
                 <FormControlLabel
                   control={<Switch checked={this.state.availableSwitch} onChange={this.handleChange} color='secondary' name="availableSwitch"/>}
                 />
               </div>
-            </FormGroup>
-          </FormControl>
-        </div>
-        
+          </div>
         </Grid>
+
+
         <Grid item xs={8}>
-        
-        
-        <div className="container parking">
-        <div className="row borderRowTop">{this.state.carList1}</div>
+          <div className="container parking">
+          <div className="row borderRowTop">{this.state.carList1}</div>
 
-        <div className="row rowArrows">
-          <div className="col-sm ">
-            <img src={imgArrowLeft} alt="zona 2"></img> Zona 2
+          <div className="row rowArrows">
+            <div className="col-sm">
+              <img src={imgArrowLeft} alt="zona 2"></img> Zona 2
+            </div>
           </div>
-        </div>
 
-        <div className="row borderRowBottom">{this.state.carList2}</div>
+          <div className="row borderRowBottom">{this.state.carList2}</div>
 
-        <div className="row rowPiso ">
-          <div className="col-sm">
-            <h5 className="titlePiso">Piso 1</h5>
+          <div className="row rowPiso ">
+            <div className="col-sm">
+              <h5 className="titlePiso">Piso 1</h5>
+            </div>
           </div>
-        </div>
 
-        <div className="row borderRowTop">{this.state.carList3}</div>
+          <div className="row borderRowTop">{this.state.carList3}</div>
 
-        <div className="row rowArrows">
-          <div className="col">
-            <img src={imgArrowRight} alt="zona 1"></img>Zona 1
+          <div className="row rowArrows">
+            <div className="col-sm">
+              <img src={imgArrowRight} alt="zona 1"></img>Zona 1
+            </div>
           </div>
-        </div>
 
-        <div className="row borderRowBottom">{this.state.carList4}</div>
-        {/*
-        <div className="row" style={{ marginTop: "20px" }}>
-          Salida | Entrada
-        </div>*/}
+          <div className="row borderRowBottom">{this.state.carList4}</div>
+          {/*
+          <div className="row" style={{ marginTop: "20px" }}>
+            Salida | Entrada
+          </div>*/}
 
-        <InfoGeneral car={this.state.carValue} />
-      </div>
-      </Grid>
+            <GeneralInfo car={this.state.carValue} />
+          </div>
+        </Grid>
       </Grid>
     );
   }

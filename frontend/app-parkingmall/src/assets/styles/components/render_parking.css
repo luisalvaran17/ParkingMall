@@ -78,10 +78,12 @@
 }
 
 .switchImg{
-  padding-right: 30%;
+  padding-right: 3%;
 }
 
 .switchesClass{
   padding-left: 16%;
+  display: flex;
+  align-items: left;
 }
 /*# sourceMappingURL=render_parking.css.map */
