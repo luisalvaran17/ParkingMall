@@ -164,10 +164,10 @@ class RenderParking extends Component {
       }
     }
 
-    let carListLocal1 = this.setListCars(listLabels[0], "A", 1);
-    let carListLocal2 = this.setListCars(listLabels[1], "A", 9);
-    let carListLocal3 = this.setListCars(listLabels[2], "A", 17);
-    let carListLocal4 = this.setListCars(listLabels[3], "A", 25);
+    let carListLocal1 = this.setListCars(listLabels[0], "A", 25);
+    let carListLocal2 = this.setListCars(listLabels[1], "A", 17);
+    let carListLocal3 = this.setListCars(listLabels[2], "A", 9);
+    let carListLocal4 = this.setListCars(listLabels[3], "A", 1);
 
     this.setState({
       carList1: carListLocal1,
@@ -188,7 +188,7 @@ class RenderParking extends Component {
               className="carSize"
               src={special}
               alt="available"
-              style={{ width: "70%" }}
+              style={{ width: "50px" }}
             ></img>
             <h5 title={number}>
               {letter}
@@ -205,7 +205,7 @@ class RenderParking extends Component {
               className="carSize"
               src={imgCarUp}
               alt="available"
-              style={{ width: "70%" }}
+              style={{ width: "50px" }}
             ></img>
             <h5 title={number}>
               {letter}
@@ -222,7 +222,7 @@ class RenderParking extends Component {
               className="carSize"
               src={available}
               alt="available"
-              style={{ width: "60%" }}
+              style={{ width: "40px" }}
             ></img>
             <h5 title={number}>
               {letter}
@@ -239,7 +239,7 @@ class RenderParking extends Component {
                 className="carSize"
                 src={disable}
                 alt="available"
-                style={{width:"70%"}}
+                style={{width:"60px"}}
               ></img>
               <h5 title={number}>
                 {letter} 
@@ -260,7 +260,7 @@ class RenderParking extends Component {
   render() {
     return (
       <Grid container spacing={3}>
-        <Grid item xs={3}>
+        <Grid item xs={3} style={{marginLeft:"25px"}}>
           <SideBar />
           <div className="switchesClass">
             <br/>

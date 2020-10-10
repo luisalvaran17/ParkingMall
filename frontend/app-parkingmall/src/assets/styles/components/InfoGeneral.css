@@ -14,9 +14,10 @@ h3{
 
 #informacion h2{
     margin-top: 5%;
-    font-family: 'Asap', sans-serif;
+    font-family: asap_medium;
+    color: rgb(174, 181, 204);
+    font-weight: 900;
     font-size: 400%;
-    color: gray;
     float: left;
 }
 

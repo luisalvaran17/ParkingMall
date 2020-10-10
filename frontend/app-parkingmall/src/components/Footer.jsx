@@ -8,7 +8,7 @@ export default function Footer1(){
                 <div className="row textTitles">
                     <div className="col-12 col-md">
                     <h5 className="titleBrand my-0 mr-md-auto">ParkingMall</h5>
-                    <p className="my-0 mr-md-auto">© Copyright 2020</p>
+                    
                     </div>
                     <div className="col-6 col-md">
                     <h6>Centro Comercial</h6>
@@ -28,13 +28,14 @@ export default function Footer1(){
                         <p>av siempre viva</p>
                     </ul>
                     </div>
-                    <div className="col-6 col-md">
+                    <div className="col col-md">
                         <ul className="list-unstyled text-small">
                             <a href='https://www.facebook.com/'> <AiFillFacebook /></a>
                             <a href='https://www.instagram.com/'> <AiFillInstagram /></a>
                             <a href='https://twitter.com/'> <AiFillTwitterSquare /></a>
                         </ul>
                     </div>
+                    
                 </div>
             </footer>
         </div>
