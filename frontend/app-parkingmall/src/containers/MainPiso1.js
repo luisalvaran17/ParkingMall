@@ -5,14 +5,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RenderParking from "../components/RenderParking";
 
-class HeaderAndFooter extends Component {
+class MainPiso1 extends Component {
     render() {
         return (
             <div style={{ backgroundColor: 'white' }} >
 
                 <Header /> {/* Header component jsx */}
 
-                <RenderParking /> {/* parking component jsx */}
+                <RenderParking piso="Piso 1" letra="A"/> {/* parking component jsx */}
 
                 <Footer /> {/* Footer component jsx */}
 
@@ -21,4 +21,4 @@ class HeaderAndFooter extends Component {
     }
 }
 
-export default HeaderAndFooter;
+export default MainPiso1;
