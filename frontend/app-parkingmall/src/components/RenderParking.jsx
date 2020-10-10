@@ -164,10 +164,10 @@ class RenderParking extends Component {
       }
     }
 
-    let carListLocal1 = this.setListCars(listLabels[0], "A", 25);
-    let carListLocal2 = this.setListCars(listLabels[1], "A", 17);
-    let carListLocal3 = this.setListCars(listLabels[2], "A", 9);
-    let carListLocal4 = this.setListCars(listLabels[3], "A", 1);
+    let carListLocal1 = this.setListCars(listLabels[0], this.props.letra, 25);
+    let carListLocal2 = this.setListCars(listLabels[1], this.props.letra, 17);
+    let carListLocal3 = this.setListCars(listLabels[2], this.props.letra, 9);
+    let carListLocal4 = this.setListCars(listLabels[3], this.props.letra, 1);
 
     this.setState({
       carList1: carListLocal1,
@@ -296,7 +296,7 @@ class RenderParking extends Component {
 
           <div className="row rowPiso ">
             <div className="col-sm">
-              <h5 className="titlePiso">Piso 1</h5>
+              <h5 className="titlePiso">{this.props.piso}</h5>
             </div>
           </div>
 

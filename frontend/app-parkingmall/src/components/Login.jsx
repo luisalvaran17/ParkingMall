@@ -98,6 +98,7 @@ class Login extends Component {
     if(this.state.userCorrect){
 
       this.componentDidMount()
+      
       return(
         <Redirect to='/' children="None" />
       )
